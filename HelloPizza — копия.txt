@@ -1,0 +1,20 @@
+Margherita 9.99 10
+Maria 11.55 5
+QuattroStagioni 10.25 8
+Carbonara 13.99 4
+QuattroFormaggi 14.99 6
+Napoletana 16.99 7
+Montanara 17.99 7
+Emiliana 19.99 4
+Romana 19.55 3
+Fattoria 13.99 2
+Schiacciata 21.99 6
+Prosciutto 15.99 2
+Americana 15.55 6
+Tonno 21.99 6
+Valtellina 19.22 3
+Gorgonzola 20.99 2
+PizzaPesto 12.99 5
+Diavola 16.66 4
+MareMonti 17.99 3
+
