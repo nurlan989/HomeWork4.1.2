@@ -1,4 +1,5 @@
 #include "Store.h"
+#include "menu.h"
 
 #include <fstream>
 #include <iostream>
@@ -6,6 +7,8 @@
 
 
 #define TAB    "           "
+
+
 
 
 void Store::SaveProductsToFile(const std::string& name, char n)
@@ -61,7 +64,7 @@ void Store::AddProduct(const std::string& name, double price, int balance)
 
 	m_products.push_back({ name, price, balance });
 
-	SaveProductsToFile("HelloPizza.txt", std::ios::app);
+	SaveProductsToFile("HelloPizza.txt", std::ios::trunc);
 
 	std::cout << "Products added successfully" << std::endl;
 }
@@ -88,7 +91,7 @@ void Store::ShowProducts()
 void Store::RemoveProduct(const std::string& name)
 {
 	LoadProductsFromFile("HelloPizza.txt", std::ios::app);
-
+	
 	for (auto& product : m_products)
 	{
 		if (product.name == name)
@@ -96,15 +99,18 @@ void Store::RemoveProduct(const std::string& name)
 			product.name = "-";
 			product.price = 0.00;
 			product.balance = 0;
-			SaveProductsToFile("HelloPizza.txt", std::ios::trunc);
 		}
 	}
+
+	SaveProductsToFile("HelloPizza.txt", std::ios::trunc);
+		
+	
 	std::cout << "Position deleted successfully !" << std::endl;
 }
 
 void Store::UpdatePrice(const std::string& name, double anotherPrice)
 {
-	LoadProductsFromFile("HelloPizza.txt", std::ios::app);
+
 
 	for (auto& product : m_products)
 	{
@@ -190,3 +196,5 @@ void Store::Buy()
 		std::cout << "Bon apetit" << std::endl;
 	}
 }
+
+

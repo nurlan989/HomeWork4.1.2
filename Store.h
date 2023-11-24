@@ -3,6 +3,9 @@
 #include <string>
 #include <vector>
 
+
+
+
 struct Product
 {
 	std::string name{ "" };
@@ -16,6 +19,9 @@ class Store
 public:
 
 	Store() = default;
+
+	
+
 
 	void SaveProductsToFile(const std::string& name, char n);
 
@@ -32,10 +38,12 @@ public:
 	void Inventory();
 
 	void Buy();
+	
 
 private:
 
 	std::vector<std::string>m_cart{};
 	std::vector<Product>m_products{ };
 };
+
 
